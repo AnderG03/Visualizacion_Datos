@@ -10,7 +10,7 @@ flights<-read.csv("Clean_Dataset.csv", sep=",",na.strings = "NA") #Separador de 
 # Seleccionar solo los vuelos sin escalas y clase business
 bus_no_stops <- flights[flights$stops == 'zero' & flights$class == 'Business' & flights$airline == 'Vistara', ]
 
-# Muestra aleatoria en lugar de los primeros 100
+# Muestra aleatoria en lugar de los primeros 500
 set.seed(123)
 bus_no_stops <- bus_no_stops[sample(nrow(bus_no_stops), 500), ]
 

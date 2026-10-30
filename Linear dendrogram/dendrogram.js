@@ -6,7 +6,7 @@ d3.json("all.json").then(paises => {
 
   // 2. Convertir a jerarquía {name, children}
   const datos = {
-    name: "Europa",
+    name: "Europe",
     children: Array.from(grupos, ([sub, lista]) => ({
       name: sub,
       children: lista.map(p => ({ name: p.name }))
